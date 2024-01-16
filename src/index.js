@@ -3,10 +3,11 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { cwd } from 'node:process';
 
+const getPath = (file) => resolve(cwd(), file);
+
 const gendiff = (obj1, obj2) => {
-  const currentDir = cwd();
-  const pathObj1 = resolve(currentDir, obj1);
-  const pathObj2 = resolve(currentDir, obj2);
+  const pathObj1 = getPath(obj1);
+  const pathObj2 = getPath(obj2);
   const readFileObj1 = readFileSync(pathObj1, 'utf-8');
   const readFileObj2 = readFileSync(pathObj2, 'utf-8');
   const parseObj1 = JSON.parse(readFileObj1);

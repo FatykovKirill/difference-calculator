@@ -1,8 +1,12 @@
 install: 
-    npm ci
+	npm ci
 publish:
-    npm publish --dry-run
+	npm publish --dry-run
 link:
-    npm link
+	npm link
 help: 
-    gendiff -h
+	gendiff -h
+lint:
+	npx eslint .
+test:
+	npm test
