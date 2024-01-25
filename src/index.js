@@ -1,17 +1,17 @@
 import _ from 'lodash';
 import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { resolve, extname } from 'node:path';
 import { cwd } from 'node:process';
+import parsing from './parsing.js';
 
 const getPath = (file) => resolve(cwd(), file);
+const getFormat = (file) => extname(file);
 
 const gendiff = (obj1, obj2) => {
-  const pathObj1 = getPath(obj1);
-  const pathObj2 = getPath(obj2);
-  const readFileObj1 = readFileSync(pathObj1, 'utf-8');
-  const readFileObj2 = readFileSync(pathObj2, 'utf-8');
-  const parseObj1 = JSON.parse(readFileObj1);
-  const parseObj2 = JSON.parse(readFileObj2);
+  const readFileObj1 = readFileSync(getPath(obj1), 'utf-8');
+  const readFileObj2 = readFileSync(getPath(obj2), 'utf-8');
+  const parseObj1 = parsing(readFileObj1, getFormat(obj1));
+  const parseObj2 = parsing(readFileObj2, getFormat(obj2));
 
   const keys = _.union(_.keys(parseObj1), _.keys(parseObj2));
   const sortedKeys = _.sortBy(keys);
