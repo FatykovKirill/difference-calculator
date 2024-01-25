@@ -5,5 +5,7 @@
 [![setup-and-test](https://github.com/FatykovKirill/frontend-project-46/actions/workflows/setup-and-test.yml/badge.svg)](https://github.com/FatykovKirill/frontend-project-46/actions/workflows/setup-and-test.yml/badge.svg)
 ### LAUNCH EXAMPLE
 
-1. Difference calculation between two flat JSON files and JSON  files. 
+1. Difference calculation between two flat JSON files. 
 [![asciicast](https://asciinema.org/a/6okHFs9W3TMSiaKMuVkqqna4K.svg)](https://asciinema.org/a/6okHFs9W3TMSiaKMuVkqqna4K)
+2. Difference calculation between two flat YAML files.
+[![asciicast](https://asciinema.org/a/6K3liCZ55UFW7FjmI9df72wna.svg)](https://asciinema.org/a/6K3liCZ55UFW7FjmI9df72wna)
