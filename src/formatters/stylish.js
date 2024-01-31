@@ -24,9 +24,9 @@ const stylish = (tree) => {
       switch (node.type) {
         case 'added':
           return `${currentIndent(depth)}+ ${node.key}: ${stringify(node.value, depth + 1)}`;
-        case 'deleted':
+        case 'removed':
           return `${currentIndent(depth)}- ${node.key}: ${stringify(node.value, depth + 1)}`;
-        case 'changed':
+        case 'updated':
           return `${currentIndent(depth)}- ${node.key}: ${stringify(node.oldValue, depth + 1)}\n${currentIndent(depth)}+ ${node.key}: ${stringify(node.newValue, depth + 1)}`;
         case 'unchanged':
           return `${currentIndent(depth)}  ${node.key}: ${stringify(node.value, depth + 1)}`;
