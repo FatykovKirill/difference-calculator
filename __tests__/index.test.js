@@ -19,6 +19,7 @@ test('stylish', () => {
 
   expect(gendiff(fileyml1, fileyml2)).toBe(result);
   expect(gendiff(filejson1, filejson2)).toBe(result);
+  expect(gendiff(filejson1, fileyml2)).toBe(result);
 });
 
 test('plain', () => {
@@ -26,4 +27,13 @@ test('plain', () => {
 
   expect(gendiff(fileyml1, fileyml2, 'plain')).toBe(result);
   expect(gendiff(filejson1, filejson2, 'plain')).toBe(result);
+  expect(gendiff(filejson1, fileyml2, 'plain')).toBe(result);
+});
+
+test('txt', () => {
+  const result = readFile('resultJSON.txt');
+
+  expect(gendiff(fileyml1, fileyml2, 'json')).toBe(result);
+  expect(gendiff(filejson1, filejson2, 'json')).toBe(result);
+  expect(gendiff(filejson1, fileyml2, 'json')).toBe(result);
 });
