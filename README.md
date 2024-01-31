@@ -91,3 +91,4 @@ $ gendiff -f json filepath1.json filepath2.json
 ### Differences in plain format
 [![asciicast](https://asciinema.org/a/OGdK6d7whcfJNmlRNv7jptiWK.svg)](https://asciinema.org/a/OGdK6d7whcfJNmlRNv7jptiWK)
 ### Differences in JSON format
+[![asciicast](https://asciinema.org/a/JFUD8Mt7LkS1mOVlpo0yNn9cb.svg)](https://asciinema.org/a/JFUD8Mt7LkS1mOVlpo0yNn9cb)
