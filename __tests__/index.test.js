@@ -30,7 +30,7 @@ test('plain', () => {
   expect(gendiff(filejson1, fileyml2, 'plain')).toBe(result);
 });
 
-test('txt', () => {
+test('JSON', () => {
   const result = readFile('resultJSON.txt');
 
   expect(gendiff(fileyml1, fileyml2, 'json')).toBe(result);
